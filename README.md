@@ -16,7 +16,7 @@ sudo apt install sshpass
 
 ### Check
 ```bash
-ssh -A hleo@147.47.200.169
+ssh -A {id}@147.47.200.169
 ssh -A master
 ssh -A node1
 ssh -A node2
