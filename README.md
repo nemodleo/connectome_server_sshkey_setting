@@ -4,10 +4,7 @@ Users must access the server through RSA key instead of password.
 This code generates an RSA key and uploads the public key to each server(gateway/master/node1/node2/storage).
 
 ### Prepare
-You have to pre-install sshpass un client server.
-```bash
-sudo apt install sshpass
-```
+nope!
 
 ### Run
 execute in usercomputer!!
