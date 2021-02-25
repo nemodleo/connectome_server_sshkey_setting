@@ -10,6 +10,7 @@ sudo apt install sshpass
 ```
 
 ### Run
+execute in usercomputer!!
 ```bash
 ./connectome_sshkey.sh {id} {pw}
 ```
