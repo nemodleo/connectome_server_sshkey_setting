@@ -1,10 +1,10 @@
-id=%1
-pw=%2
+set id=%1
+set pw=%2
 
 ssh-keygen -t rsa
-cat %systemdrive%%homepath%/.ssh/id_rsa.pub | ssh $id@147.47.200.169 -o StrictHostKeyChecking=no 'umask 077;mkdir ~/.ssh;cat >> ~/.ssh/authorized_keys'
+type %systemdrive%%homepath%\.ssh\id_rsa.pub | ssh %id%@147.47.200.169 -o StrictHostKeyChecking=no 'umask 077;mkdir ~/.ssh;cat >> ~/.ssh/authorized_keys'
 
-ssh -T -A -o StrictHostKeyChecking=no $id@147.47.200.169 << EOF
+ssh -T -A -o StrictHostKeyChecking=no %id%@147.47.200.169 << EOF
 bash
 nodes="master node1 node2 storage"
 for node in \$nodes; do 
