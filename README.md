@@ -35,7 +35,7 @@ https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html 에서 버전에 
 ### Check
 CMD or Powershell
 ```
-putty.exe -ssh -A {id}1@147.47.200.169 
+putty.exe -ssh -A {id}@147.47.200.169 
 ssh -A master
 ssh -A node1
 ssh -A node2
