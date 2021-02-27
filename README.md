@@ -9,7 +9,7 @@ This code generates an RSA key and uploads the public key to each server(gateway
 [1] PuTTY Installation   
 https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html 에서 버전에 맞는 putty 설치   
 
-[2] RSA Key Generation   
+[2] RSA Key Generation (.ppk .pub pair)  
 1. PuTTYgen 검색 후 실행   
 1. Generate button   
 1. Keypassphtase,  Confirm passphrase에 원하는 키 암호 입력   
