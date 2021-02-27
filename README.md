@@ -15,7 +15,7 @@ https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html 에서 버전에 
 1. Keypassphtase,  Confirm passphrase에 원하는 키 암호 입력   
 1. Save public key button (`C:\Users\{user}\.ssh\id_rsa.pub` 권장)   
 1. Save private key button (`C:\Users\{user}\.ssh\id_rsa` 권장)   
-1. (cmd) notpad C:\Users\{user}\.ssh\id_rsa.pub   
+1. (cmd) `notpad C:\Users\{user}\.ssh\id_rsa.pub` 
 1. `ssh-rsa AAAAB.........`(한줄, 나머지 싹 지워주세요) 형식으로 고쳐서 저장
 
 [3] PuTTy Setting   
@@ -23,7 +23,7 @@ https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html 에서 버전에 
 1. Connection/data/Login deteails/Auto -login username에 server user id 입력
 1. Connection/SSH/Auth/Privat Key file for authentication 에 저장한 경로 입력   
 1. Session/Saved Sessions 에 원하는 이름 입력 후 저장
-1. (cmd) connectome_sshkey.bat {userid} {pw} 실행 혹은 모든 서버노드에 접속하여 .ssh/authorized_keys 안에 .pub 내용 추가
+1. (cmd) `connectome_sshkey.bat {userid} {pw}` 실행 or 모든 서버노드에 접속하여 `.ssh/authorized_keys` 안에 .pub 내용 추가
 
 ### Check
 CMD or Powershell
