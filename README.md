@@ -23,7 +23,7 @@ https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html 에서 버전에 
 1. Connection/data/Login deteails/Auto -login username에 server user id 입력
 1. Connection/SSH/Auth/Privat Key file for authentication 에 저장한 경로 입력   
 1. Session/Saved Sessions 에 원하는 이름 입력 후 저장
-1. (cmd) connectome_sshkey.bat {userid} {pw} 실행
+1. (cmd) connectome_sshkey.bat {userid} {pw} 실행 혹은 모든 서버노드에 접속하여 .ssh/authorized_keys 안에 .pub 내용 추가
 
 ### Check
 CMD or Powershell
