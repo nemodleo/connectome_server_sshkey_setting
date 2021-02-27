@@ -37,7 +37,7 @@ https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html 에서 버전에 
 ### Check
 New CMD or Powershell
 ```
-putty.exe -ssh -A {id}@147.47.200.169 -i 
+putty.exe -ssh -A {id}@147.47.200.169 -i C:\Users\{user}\.ssh\id_rsa.ppk
 ssh -A master
 ssh -A node1
 ssh -A node2
