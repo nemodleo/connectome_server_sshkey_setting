@@ -26,7 +26,7 @@ https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html 에서 버전에 
 1. Save private key button (`C:\Users\{user}\.ssh\id_rsa` 권장)
 
 ### Check
-`C:\Users\{user}\.ssh\id_rsa.ppk` 더블 클릭 및 암호 입력!
+`C:\Users\{user}\.ssh\id_rsa.ppk` 더블 클릭 및 암호 입력!   
 New CMD or Powershell
 ```
 putty.exe -ssh -A {id}@147.47.200.169
