@@ -3,6 +3,7 @@
 This repository is intended for current users (2021/2/20) of the Connetome LAB server.   
 Users must access the server through RSA key instead of password.   
 This code generates an RSA key and uploads the public key to each server(gateway/master/node1/node2/storage).
+제가 아래 방법 정상 작동함을 확인해봤습니다.
 
 ### Prepare
 [1] PuTTY Installation   
