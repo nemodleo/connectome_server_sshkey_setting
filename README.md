@@ -32,10 +32,10 @@ https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html 에서 버전에 
 5. Session/Host Name 에 147.47.200.169 입력
 6. Session/Saved Sessions 에 원하는 이름 입력 후 저장
 7. (cmd) `connectome_sshkey.bat {userid} {pw}` 실행 or 모든 서버노드에 접속하여 `.ssh/authorized_keys` 안에 .pub 내용 추가
-8. Putty/Session/open 누르고 key passwd 
+8. Putty/Session/open 누르고 key passwd 입력
 
 ### Check
-CMD or Powershell
+New CMD or Powershell
 ```
 putty.exe -ssh -A {id}@147.47.200.169 
 ssh -A master
