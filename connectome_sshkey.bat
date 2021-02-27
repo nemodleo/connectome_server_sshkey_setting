@@ -4,7 +4,7 @@
 set id=%1
 set pw=%2
 
-ssh-keygen -t rsa
+:: ssh-keygen -t rsa
 echo "%userprofile%\.ssh\id_rsa.pub"
 type "%userprofile%\.ssh\id_rsa.pub"
 
