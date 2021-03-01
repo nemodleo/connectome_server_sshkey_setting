@@ -25,7 +25,7 @@ This code generates an RSA key and uploads the public key to each server(gateway
 1. Keypassphtase,  Confirm passphrase에 원하는 키 암호 입력 
 1. Save private key button (`C:\Users\{user}\.ssh\id_rsa` 권장)
 
-[3] RSA Public Key Upload
+[3] Public Key Upload
 1. (cmd) `connectome_sshkey.bat {userid} {pw}` 실행 or 모든 서버노드에 접속하여 .ssh/authorized_keys 안에 .pub 내용 추가
 
 ### Check
