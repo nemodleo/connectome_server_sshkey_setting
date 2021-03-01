@@ -7,7 +7,7 @@ This code generates an RSA key and uploads the public key to each server(gateway
 
 ### Prepare
 [1] PuTTY Installation   
-https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html 에서 버전에 맞는 putty 설치   
+1. https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html 에서 버전에 맞는 putty 설치   
 
 [2] RSA Key Generation (.ppk .pub pair)  
 1. PuTTYgen 검색 후 실행   
@@ -24,6 +24,9 @@ https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html 에서 버전에 
 1. PuTTYgen 실행, Load private key
 1. Keypassphtase,  Confirm passphrase에 원하는 키 암호 입력 
 1. Save private key button (`C:\Users\{user}\.ssh\id_rsa` 권장)
+
+[3] RSA Public Key Upload
+1. (cmd) `connectome_sshkey.bat {userid} {pw}` 실행 or 모든 서버노드에 접속하여 .ssh/authorized_keys 안에 .pub 내용 추가
 
 ### Check
 `C:\Users\{user}\.ssh\id_rsa.ppk` 더블 클릭 및 암호 입력!   
