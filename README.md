@@ -9,7 +9,7 @@ nope!
 
 ### Run
 ```bash
-./connectome_sshkey.sh {id}
+./connectome_sshkey.sh {id} {pw}
 ```
 
 ### Check
