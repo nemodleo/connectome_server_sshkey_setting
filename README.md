@@ -32,7 +32,7 @@ This code generates an RSA key and uploads the public key to each server(gateway
 `C:\Users\{user}\.ssh\id_rsa.ppk` 더블 클릭 및 암호 입력!   
 New CMD or Powershell
 ```
-putty.exe -ssh -A {id}@147.47.200.169
+putty.exe -ssh -A {id}@147.47.200.138
 ssh -A master
 ssh -A node1
 ssh -A node2
