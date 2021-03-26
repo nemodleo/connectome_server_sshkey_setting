@@ -5,9 +5,9 @@ pw=$2
 nodes="master node1 node2 storage"
 
 ssh-keygen -t rsa
-cat ~/.ssh/id_rsa.pub | ssh $id@147.47.200.169 -o StrictHostKeyChecking=no 'umask 077;mkdir ~/.ssh;cat >> ~/.ssh/authorized_keys'
+cat ~/.ssh/id_rsa.pub | ssh $id@147.47.200.138 -o StrictHostKeyChecking=no 'umask 077;mkdir ~/.ssh;cat >> ~/.ssh/authorized_keys'
 
-ssh -T -A -o StrictHostKeyChecking=no $id@147.47.200.169 << EOF
+ssh -T -A -o StrictHostKeyChecking=no $id@147.47.200.138 << EOF
 bash
 nodes="$nodes"
 for node in \$nodes; do 
