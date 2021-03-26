@@ -14,7 +14,7 @@ nope!
 
 ### Check
 ```bash
-ssh -A {id}@147.47.200.169
+ssh -A {id}@147.47.200.138
 ssh -A master
 ssh -A node1
 ssh -A node2
