@@ -19,7 +19,7 @@ This code generates an RSA key and uploads the public key to each server(gateway
 1. `ssh-rsa AAAAB3Nz...6jv9Uw== rsa-key-20210227`(한줄, 나머지 싹 지워주세요) 형식으로 고쳐서 저장   
 
 [2-etc] [2]가 안 됐을 경우    
-이미 private, public key가 있는 경우, PuTTYgen이 너무 오래 걸리는 경우(ssh-keygen으로 key pair 생성)
+이미 private, public key가 있는 경우, PuTTYgen이 너무 오래 걸리는 경우(ssh-keygen으로 key pair 생성 ```ssh-keygen -t rsa```)
 1. public key 형식 맞춰서 저장(`C:\Users\{user}\.ssh\id_rsa.pub` 권장)  
 1. PuTTYgen 실행, Load private key
 1. Keypassphtase,  Confirm passphrase에 원하는 키 암호 입력 
