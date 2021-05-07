@@ -29,6 +29,7 @@ This code generates an RSA key and uploads the public key to each server(gateway
 1. (cmd) `connectome_sshkey.bat {userid} {pw}` 실행 or 모든 서버노드에 접속하여 .ssh/authorized_keys 안에 .pub 내용 추가
 
 ### Check
+#### [check 1]
 `C:\Users\{user}\.ssh\id_rsa.ppk` 더블 클릭 및 암호 입력!   
 New CMD or Powershell
 ```
@@ -39,5 +40,26 @@ ssh -A node2
 ssh -A storage 
 ```
 비밀번호 없이 접속 확인
+
+#### [check 2]
+[Session 저장]
+1. PuTTY 실행
+1. Session > Specify the destination you want to connect to > Host Name (or IP address)  : 147.47.200.138
+1. Connection > Data > Login details > Auto-login username : {서버에 등록된 유저이름}
+1. Connection > SSH > Auth > Authentication parameters > Allow agent forwarding 체크
+1. Connection > SSH > Auth > Authentication parameters > Private key file for authentication : {Privat key 경로 지정}
+1. Session > Load. save or delete a stored session > Saved Sessions : {원하는 세션 이름}
+1. Session > Load. save or delete a stored session > Save
+
+[Session 실행]
+1. PuTTY 실행
+1. Session > Load. save or delete a stored session > {저장한 세션 이름} 더블 클릭
+1. 이후 PuTTY 생성된 창에서 비밀번호 없이 접속
+```
+ssh -A master
+ssh -A node1
+ssh -A node2
+ssh -A storage
+```
 
 ### Issue
