@@ -42,6 +42,19 @@ Host connectome
 	ForwardAgent yes
 ```
 
+4. ssh-add key 등록
+```
+ssh-agent -s
+ssh-add $HOME/.ssh/id_rsa
+
+#아래방법으로 확인
+ssh -A {id}@147.47.200.138
+ssh -A master
+ssh -A node1
+ssh -A node2
+ssh -A storage 
+```
+
 ### 2. Key upload & check
 1. userID, First_Lastname(ex. Hyun_Park)  그리고 public key(ex. id_rsa.pub)내용을 Server administrator에게 전달
 2. Server administrator에게 유저 생성 및 키 업로드 완료 응답 받은 경우, 아래 방법 및 명령어로 서버 접속 확인
