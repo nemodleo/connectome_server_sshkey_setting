@@ -43,7 +43,7 @@ Host connectome
 ```
 
 ### 2. Key upload & check
-1. userID, First_Lastname 그리고 public key(ex. id_rsa.pub)내용을 Server administrator에게 전달
+1. userID, First_Lastname(ex. Hyun_Park)  그리고 public key(ex. id_rsa.pub)내용을 Server administrator에게 전달
 2. Server administrator에게 유저 생성 및 키 업로드 완료 응답 받은 경우, 아래 방법 및 명령어로 서버 접속 확인
 
 #### Method A. PuTTY
