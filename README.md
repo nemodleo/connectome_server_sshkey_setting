@@ -2,9 +2,11 @@
 This repository is intended for current users (2021/8/04) of the Connetome LAB server.   
 Users must access the server through RSA key instead of password.   
 본 레포지토리에 있는 코드는 예전에 비밀번호가 있을 때, key를 업로드하기 위한 코드입니다. 참고 안하셔도 됩니다. 
+
 추후 이미 키 설정되어 있는 경우 또다른 키를 한번에 코드를 공개하겠습니다.
 문제 발생 시 서버 관리인에게 문의!
-Only Linux client! **Window users should use Window branch!**
+
+Only Linux(w MAC) client! **Window users should use Window branch!**
 
 ### 1. Generate Key
 
