@@ -42,6 +42,13 @@ Host connectome
 	ForwardAgent yes
 ```
 
+혹은
+```
+Host 147.47.200.138
+  IdentityFile ~/.ssh/id_rsa
+  ForwardAgent yes
+```
+
 ### 2. Key upload & check
 1. userID, First_Lastname(ex. Hyun_Park)  그리고 public key(ex. id_rsa.pub)내용을 Server administrator에게 전달
 2. Server administrator에게 유저 생성 및 키 업로드 완료 응답 받은 경우, 아래 방법 및 명령어로 서버 접속 확인
@@ -82,27 +89,14 @@ ssh -A storage
 
 #### Method B. OpenSSH
 ```
+//config에 저장한 host로 접근, -A 윈도우에서 작동하지 않습니다.
 ssh connectome
+ssh {id}@147.47.200.138
+
 ssh -A master
 ssh -A node1
 ssh -A node2
 ssh -A storage
-```
-
-**(안 될때)Window, PuTTY안 쓰는 경우 ssh-add key 등록**
-```
-ssh-agent -s
-ssh-add $HOME/.ssh/id_rsa
-```
-```
-# 이 경우 둘 다 가능합니다 (-A는 작동하지 )
-ssh {id}@147.47.200.138
-ssh connectome
-
-ssh -A master
-ssh -A node1
-ssh -A node2
-ssh -A storage 
 ```
 
 ### Issue
@@ -110,4 +104,10 @@ RSA Key Problem (Too many authentication failures)
 Do this!
 ```bash
 ssh-add -D 
+```
+
+**config가 작동 하지 않는 경우(PuTTY 제외), ssh-add key 등록**
+```
+ssh-agent -s
+ssh-add $HOME/.ssh/id_rsa
 ```
