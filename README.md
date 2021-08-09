@@ -95,8 +95,8 @@ ssh-agent -s
 ssh-add $HOME/.ssh/id_rsa
 ```
 ```
-# 이 경우 둘 다 가능합니다
-ssh -A {id}@147.47.200.138
+# 이 경우 둘 다 가능합니다 (-A는 작동하지 )
+ssh {id}@147.47.200.138
 ssh connectome
 
 ssh -A master
