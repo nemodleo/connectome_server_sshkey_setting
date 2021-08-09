@@ -89,7 +89,7 @@ ssh -A node2
 ssh -A storage
 ```
 
-**안 될때, ssh-add key 등록**
+**(안 )Window, PuTTY안 쓰는 경우 ssh-add key 등록**
 ```
 ssh-agent -s
 ssh-add $HOME/.ssh/id_rsa
