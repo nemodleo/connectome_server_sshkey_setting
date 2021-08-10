@@ -1,10 +1,12 @@
 # connectome_server_sshkey_setting 
-## For window users
+### For window users
 This repository is intended for current users (2021/8/04) of the Connetome LAB server.   
 Users must access the server through RSA key instead of password.   
 본 레포지토리에 있는 코드는 예전에 비밀번호가 있을 때, key를 업로드하기 위한 코드입니다. 참고 안하셔도 됩니다. 
 추후 이미 키 설정되어 있는 경우 또다른 키를 한번에 코드를 공개하겠습니다.
 문제 발생 시 서버 관리인에게 문의!
+
+---
 
 ### 1. Generate Key
 #### Method A. PuTTY
@@ -49,6 +51,13 @@ Host 147.47.200.138
   ForwardAgent yes
 ```
 
+6. ssh-add key 등록
+```
+ssh-agent -s
+ssh-add $HOME/.ssh/id_rsa
+```
+---
+
 ### 2. Key upload & check
 1. userID, First_Lastname(ex. Hyun_Park)  그리고 public key(ex. id_rsa.pub)내용을 Server administrator에게 전달
 2. Server administrator에게 유저 생성 및 키 업로드 완료 응답 받은 경우, 아래 방법 및 명령어로 서버 접속 확인
@@ -89,6 +98,9 @@ ssh -A storage
 
 #### Method B. OpenSSH
 ```
+//윈도우 전원키면 ssh-agent 자동 실행 안되는 것 같습니다
+ssh-agent
+
 //config에 저장한 host로 접근, -A 윈도우에서 작동하지 않습니다.
 ssh connectome
 ssh {id}@147.47.200.138
@@ -99,15 +111,29 @@ ssh -A node2
 ssh -A storage
 ```
 
+---
+
 ### Issue
 RSA Key Problem (Too many authentication failures)   
-Do this!
 ```bash
 ssh-add -D 
 ```
 
-**config가 작동 하지 않는 경우(PuTTY 제외), ssh-add key 등록**
+**config가 작동 하지 않는 경우(PuTTY 제외)**
+보통의 경우 1만해도 해결됩니다.
+1. ```ssh-agent``` 
+2. ```ssh-add -k```
+3. ```ssh-add -l```
+4. ssh-add key 재등록
+
+
+
+#### [Tip] ssh key name
+다음을 자동으로 먼저 찾아서 이용합니다. 되도록 이를 키 이름으로 지정하는 것이 좋습니다.
 ```
-ssh-agent -s
-ssh-add $HOME/.ssh/id_rsa
+debug1: Trying private key: /Users/{user}/.ssh/id_rsa
+debug1: Trying private key: /Users/{user}/.ssh/id_dsa
+debug1: Trying private key: /Users/{user}/.ssh/id_ecdsa
+debug1: Trying private key: /Users/{user}/.ssh/id_ed2551
 ```
+
