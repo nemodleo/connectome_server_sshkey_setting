@@ -1,0 +1,33 @@
+Host ct
+  HostName 147.47.200.138
+  User nemod
+  IdentityFile ~/.ssh/id_rsa
+  ForwardAgent yes
+
+Host ct-master
+  HostName 147.47.200.154
+  User nemod
+  IdentityFile ~/.ssh/id_rsa
+  ForwardAgent yes
+  ProxyJump ct
+
+Host ct-node1
+  HostName 147.47.200.153
+  User nemod
+  IdentityFile ~/.ssh/id_rsa
+  ForwardAgent yes
+  ProxyJump ct
+
+Host ct-node2
+  HostName 147.47.200.152
+  User nemod
+  IdentityFile ~/.ssh/id_rsa
+  ForwardAgent yes
+  ProxyJump ct
+
+Host ct-storage
+  HostName 147.47.200.150
+  User nemod
+  IdentityFile ~/.ssh/id_rsa
+  ForwardAgent yes
+  ProxyJump ct
